@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro | EduProject V2</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .registro {
+      max-width: 420px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 16px;
+      background: #1e293b;
+      color: white;
+    }
+
+    .registro input,
+    .registro button {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+
+    .registro input {
+      border: 1px solid #475569;
+      background: #0f172a;
+      color: white;
+    }
+
+    .registro button {
+      border: none;
+      background: #7c3aed;
+      color: white;
+      cursor: pointer;
+    }
+
+    #mensaje {
+      overflow-wrap: anywhere;
+    }
+  </style>
+</head>
+<body>
+  <main class="registro">
+    <h1>Crear cuenta</h1>
+    <p>Únete a EduProject V2</p>
+
+    <form id="formRegistro">
+      <label for="nombre">Nombre completo</label>
+      <input id="nombre" type="text" required>
+
+      <label for="correo">Correo electrónico</label>
+      <input id="correo" type="email" required>
+
+      <label for="password">Contraseña</label>
+      <input id="password" type="password" minlength="6" required>
+
+      <button type="submit">Registrarme</button>
+    </form>
+
+    <p id="mensaje" role="status"></p>
+    <p><a href="login.html">Ya tengo una cuenta</a></p>
+    <p><a href="index.html">Volver al inicio</a></p>
+  </main>
+
+  <script type="module" src="registro.js"></script>
+</body>
+</html>

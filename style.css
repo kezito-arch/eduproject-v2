@@ -1,0 +1,198 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#111827;
+box-shadow:0 4px 15px rgba(0,0,0,.3);
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#60a5fa;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#60a5fa;
+}
+
+.hero{
+padding:100px 8%;
+text-align:center;
+}
+
+.hero h1{
+font-size:65px;
+max-width:900px;
+margin:auto;
+line-height:1.2;
+}
+
+.hero p{
+margin-top:25px;
+font-size:22px;
+color:#cbd5e1;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.btn{
+display:inline-block;
+margin-top:35px;
+padding:15px 35px;
+background:#3b82f6;
+border-radius:12px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+background:#2563eb;
+}
+
+.materias{
+padding:80px 8%;
+}
+
+.materias h2{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:.3s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+margin-top:15px;
+}
+
+.stats{
+padding:80px 8%;
+}
+
+.stats h2{
+text-align:center;
+margin-bottom:40px;
+font-size:40px;
+}
+
+.numeros{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+}
+
+.numero{
+background:#1e293b;
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+.numero h3{
+font-size:45px;
+color:#60a5fa;
+}
+
+footer{
+padding:30px;
+text-align:center;
+background:#111827;
+margin-top:50px;
+}
+.login-container{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.login-card{
+background:#1e293b;
+padding:40px;
+border-radius:25px;
+width:400px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.login-card h1{
+margin-bottom:10px;
+color:#60a5fa;
+}
+
+.login-card p{
+color:#cbd5e1;
+margin-bottom:20px;
+}
+
+.login-card input{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:none;
+border-radius:10px;
+font-size:16px;
+}
+
+.login-card button{
+width:100%;
+padding:15px;
+background:#3b82f6;
+border:none;
+border-radius:10px;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+.login-card button:hover{
+background:#2563eb;
+}

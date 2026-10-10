@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursos Educativos | EduProject V2</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #111c33;
+      border-bottom: 1px solid #263550;
+      padding: 20px;
+    }
+
+    .barra {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: #22c55e;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      padding: 8px;
+    }
+
+    nav a:hover {
+      color: #22c55e;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 35px auto;
+      padding: 0 20px 40px;
+    }
+
+    .introduccion {
+      margin-bottom: 28px;
+    }
+
+    .introduccion h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .introduccion p {
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+
+    .panel {
+      background: #172338;
+      border: 1px solid #2b3a52;
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 28px;
+    }
+
+    .panel h2 {
+      margin-bottom: 20px;
+      color: #22c55e;
+      font-size: 22px;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      color: #e2e8f0;
+      font-weight: bold;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #394963;
+      border-radius: 8px;
+      background: #0f172a;
+      color: white;
+      font: inherit;
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #22c55e;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    button {
+      border: none;
+      border-radius: 8px;
+      background: #22c55e;
+      color: #052e16;
+      padding: 13px 18px;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #16a34a;
+    }
+
+    #mensaje {
+      margin-top: 12px;
+      color: #86efac;
+      overflow-wrap: anywhere;
+    }
+
+    .herramientas {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 22px;
+    }
+
+    #listaRecursos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+    }
+
+    .tarjeta-recurso {
+      background: #172338;
+      border: 1px solid #2b3a52;
+      border-radius: 12px;
+      padding: 20px;
+      overflow-wrap: anywhere;
+    }
+
+    .tarjeta-recurso h3 {
+      color: #4ade80;
+      margin-bottom: 12px;
+    }
+
+    .tarjeta-recurso p {
+      color: #cbd5e1;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .tarjeta-recurso a {
+      display: inline-block;
+      margin-top: 5px;
+      color: #4ade80;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #94a3b8;
+      border-top: 1px solid #263550;
+    }
+
+    @media (max-width: 600px) {
+      .introduccion h1 {
+        font-size: 26px;
+      }
+
+      .herramientas {
+        grid-template-columns: 1fr;
+      }
+
+      .panel {
+        padding: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="barra">
+      <div class="logo">EduProject V2</div>
+
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="categorias.html">Categorías</a>
+        <a href="recursos.html">Recursos</a>
+        <a href="login.html">Iniciar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="introduccion">
+      <h1>Recursos educativos 📚</h1>
+      <p>
+        Comparte materiales de estudio, encuentra información útil
+        y aprende junto a otros estudiantes.
+      </p>
+    </section>
+
+    <section class="panel">
+      <h2>Publicar un recurso</h2>
+
+      <form id="formRecurso">
+        <div>
+          <label for="titulo">Título del recurso</label>
+          <input
+            type="text"
+            id="titulo"
+            maxlength="120"
+            placeholder="Ej. Resumen de ecuaciones"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="descripcion">Descripción</label>
+          <textarea
+            id="descripcion"
+            maxlength="1000"
+            placeholder="Explica brevemente de qué trata el recurso"
+            required
+          ></textarea>
+        </div>
+
+        <div>
+          <label for="enlace">Enlace del recurso</label>
+          <input
+            type="url"
+            id="enlace"
+            placeholder="https://..."
+            required
+          >
+        </div>
+
+        <div>
+          <label for="categoria">Categoría</label>
+          <select id="categoria" required>
+            <option value="">Selecciona una categoría</option>
+            <option value="Matemáticas">Matemáticas</option>
+            <option value="Física">Física</option>
+            <option value="Informática">Informática</option>
+            <option value="Química">Química</option>
+            <option value="Biología">Biología</option>
+            <option value="Lenguaje">Lenguaje</option>
+            <option value="Historia">Historia</option>
+            <option value="Otras">Otras</option>
+          </select>
+        </div>
+
+        <button type="submit">Publicar recurso</button>
+      </form>
+
+      <p id="mensaje" role="status" aria-live="polite"></p>
+    </section>
+
+    <section>
+      <h2 style="margin-bottom: 18px;">Explorar recursos</h2>
+
+      <div class="herramientas">
+        <div>
+          <label for="filtroCategoria">Filtrar por categoría</label>
+          <select id="filtroCategoria">
+            <option value="Todas">Todas las categorías</option>
+            <option value="Matemáticas">Matemáticas</option>
+            <option value="Física">Física</option>
+            <option value="Informática">Informática</option>
+            <option value="Química">Química</option>
+            <option value="Biología">Biología</option>
+            <option value="Lenguaje">Lenguaje</option>
+            <option value="Historia">Historia</option>
+            <option value="Otras">Otras</option>
+          </select>
+        </div>
+      </div>
+
+      <section id="listaRecursos">
+        <p>Cargando recursos...</p>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>EduProject V2 · Plataforma de Recursos Educativos</p>
+  </footer>
+
+  <script type="module" src="recursos.js"></script>
+</body>
+</html>
